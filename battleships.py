@@ -1,6 +1,3 @@
-"""Battleships
-A simple battleships game by Luke Storry
-"""
 
 from typing import NamedTuple
 from enum import Enum
@@ -8,7 +5,7 @@ import random
 import pygame
 import sys
 
-"""Global Settings"""
+
 ship_sizes = [6, 4, 3, 3, 2]
 board_size = 10
 margin = 15
@@ -26,19 +23,16 @@ colours = {
 
 
 class Direction(Enum):
-    """Enum to handle ship directions"""
     NORTH = 0
     EAST = 1
     SOUTH = 2
     WEST = 3
-
     def next(self):
         return Direction((self.value + 1) % 4)
 
 
 class Ship:
     def __init__(self, x, y, d, l):
-        """Create ship"""
         self.x = x
         self.y = y
         self.direction = d
