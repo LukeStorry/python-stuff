@@ -1,9 +1,8 @@
 
-from typing import NamedTuple
-from enum import Enum
-import random
-import pygame
 import sys
+import pygame
+import random
+from enum import Enum
 
 
 ship_sizes = [6, 4, 3, 3, 2]
@@ -27,7 +26,7 @@ class Direction(Enum):
     EAST = 1
     SOUTH = 2
     WEST = 3
-    
+
     def next(self):
         return Direction((self.value + 1) % 4)
 
